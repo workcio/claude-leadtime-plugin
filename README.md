@@ -12,6 +12,8 @@ https://leadtime.app/api/mcp
 
 Claude should start the Leadtime OAuth browser flow when the bundled MCP connector is first used. Personal access tokens are not needed for normal task/project work inside Claude.
 
+The bundled `.mcp.json` intentionally sets `"oauth": true` so Claude Cowork treats Leadtime as an OAuth MCP connector during plugin installation.
+
 Personal access tokens are only for users building scripts, automations, or external integrations against the Public API.
 
 ## Local validation

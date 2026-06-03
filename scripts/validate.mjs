@@ -85,6 +85,9 @@ if (!manifest?.mcpServers) {
   if (leadtimeMcp?.url !== 'https://leadtime.app/api/mcp') {
     fail('Bundled Leadtime MCP url must be https://leadtime.app/api/mcp.');
   }
+  if (leadtimeMcp?.oauth !== true) {
+    fail('Bundled Leadtime MCP must set oauth to true for Claude Cowork.');
+  }
 }
 
 const skillsRoot = join(pluginRoot, 'skills');
