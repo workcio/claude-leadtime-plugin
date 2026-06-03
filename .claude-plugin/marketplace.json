@@ -1,0 +1,22 @@
+{
+  "name": "leadtime",
+  "description": "Leadtime plugins for Claude Cowork and Claude Code.",
+  "version": "0.1.0",
+  "owner": {
+    "name": "Leadtime Labs GmbH",
+    "email": "support@leadtime.app"
+  },
+  "plugins": [
+    {
+      "name": "leadtime",
+      "displayName": "Leadtime",
+      "description": "Work with Leadtime tasks, projects, and workspace data.",
+      "version": "0.1.0",
+      "source": "./plugins/leadtime",
+      "category": "Productivity",
+      "tags": ["leadtime", "tasks", "projects", "erp", "mcp"],
+      "strict": true,
+      "defaultEnabled": true
+    }
+  ]
+}
