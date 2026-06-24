@@ -1,6 +1,6 @@
 {
   "name": "leadtime",
-  "description": "Leadtime plugins for Claude Cowork and Claude Code.",
+  "description": "Leadtime plugins for Claude Cowork and Claude Code, including workspace onboarding and coaching.",
   "version": "0.1.0",
   "owner": {
     "name": "Leadtime Labs GmbH",
@@ -10,11 +10,20 @@
     {
       "name": "leadtime",
       "displayName": "Leadtime",
-      "description": "Work with Leadtime tasks, projects, and workspace data.",
+      "description": "Work with Leadtime tasks, projects, workspace data, guided onboarding, and ongoing workspace coaching.",
       "version": "0.1.0",
       "source": "./plugins/leadtime",
       "category": "Productivity",
-      "tags": ["leadtime", "tasks", "projects", "erp", "mcp"],
+      "tags": [
+        "leadtime",
+        "tasks",
+        "projects",
+        "erp",
+        "mcp",
+        "onboarding",
+        "setup",
+        "coach"
+      ],
       "strict": true,
       "defaultEnabled": true
     }

@@ -2,7 +2,7 @@
   "name": "leadtime",
   "displayName": "Leadtime",
   "version": "0.1.0",
-  "description": "Work with Leadtime data and workflows from Claude.",
+  "description": "Work with Leadtime data and workflows from Claude, including guided onboarding and ongoing workspace coaching.",
   "author": {
     "name": "Leadtime Labs GmbH",
     "email": "support@leadtime.app",
@@ -11,8 +11,18 @@
   "homepage": "https://leadtime.app",
   "repository": "https://github.com/workcio/claude-leadtime-plugin",
   "license": "MIT",
-  "keywords": ["leadtime", "tasks", "projects", "erp", "public-api"],
+  "keywords": [
+    "leadtime",
+    "tasks",
+    "projects",
+    "erp",
+    "public-api",
+    "onboarding",
+    "setup",
+    "coach"
+  ],
   "skills": "./skills/",
+  "commands": "./commands/",
   "mcpServers": "./.mcp.json",
   "defaultEnabled": true
 }

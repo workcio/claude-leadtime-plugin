@@ -4,7 +4,10 @@ import { join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const repoRoot = fileURLToPath(new URL('../../../../', import.meta.url));
-const projectRoot = join(repoRoot, 'libs/integrations/claude-leadtime-plugin');
+const projectRoot = join(
+  repoRoot,
+  'dist/libs/integrations/claude-leadtime-plugin',
+);
 const pluginRoot = join(projectRoot, 'plugins/leadtime');
 const errors = [];
 

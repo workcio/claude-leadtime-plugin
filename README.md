@@ -4,6 +4,8 @@ This folder is the source of truth for the public Leadtime Claude plugin marketp
 
 The public repository is generated from this project and should not be edited directly.
 
+Common Leadtime skills and Claude slash commands are generated from `libs/integrations/agent-plugin-core` during build. Keep shared behavior there, and put Claude-only packaging or MCP behavior in this package.
+
 The plugin bundles the production Leadtime MCP endpoint:
 
 ```text

@@ -1,6 +1,7 @@
 import { cp, mkdir, rm, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { generateAgentPluginAssets } from '../../agent-plugin-core/scripts/generate-plugin-assets.mjs';
 
 const repoRoot = fileURLToPath(new URL('../../../../', import.meta.url));
 const projectRoot = join(repoRoot, 'libs/integrations/claude-leadtime-plugin');
@@ -24,6 +25,13 @@ for (const entry of [
     force: true,
   });
 }
+
+await generateAgentPluginAssets({
+  agent: 'claude',
+  outputRoot,
+  skillsPath: 'plugins/leadtime/skills',
+  commandsPath: 'plugins/leadtime/commands',
+});
 
 await writeFile(
   join(outputRoot, '.generated-from'),
