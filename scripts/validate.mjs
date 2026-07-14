@@ -140,11 +140,9 @@ const claudeValidation = spawnSync(
   },
 );
 
-if (claudeValidation.error?.code === 'ENOENT') {
-  console.warn(
-    'Claude CLI not found; skipped claude plugin validate --strict.',
-  );
-} else if (claudeValidation.status !== 0) {
+const claudeCliAvailable = claudeValidation.error?.code !== 'ENOENT';
+
+if (claudeCliAvailable && claudeValidation.status !== 0) {
   fail(
     [
       'claude plugin validate --strict failed:',
@@ -161,4 +159,8 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log('Leadtime Claude plugin validation passed.');
+console.log(
+  claudeCliAvailable
+    ? 'Leadtime Claude plugin validation passed.'
+    : 'Leadtime Claude plugin static validation passed.',
+);
