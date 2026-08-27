@@ -5,7 +5,7 @@ description: Use when the user asks to work with Leadtime, inspect/update Leadti
 
 # Leadtime
 
-Use this skill when the user asks Claude to work with Leadtime, inspect or update tasks/projects/workspace data, plan task work, draft comments, create tasks, summarize reports, or sends a Leadtime link.
+Use this skill when the user asks the agent to work with Leadtime, inspect or update tasks/projects/workspace data, plan task work, draft comments, create tasks, summarize reports, or sends a Leadtime link.
 
 ## What Leadtime is
 
@@ -25,9 +25,9 @@ Permissions are per user/role — never assume admin access.
 
 ## Default Tool Path
 
-Prefer the bundled Leadtime MCP connector for real workspace data. Do not tell the user to create a personal access token for normal in-product work; use the plugin MCP OAuth connection instead. Ask for an API key only when the user wants to build scripts, automations, or third-party integrations outside Claude.
+Prefer the bundled Leadtime MCP server for real workspace data. Do not tell the user to create a personal access token for normal in-product work; use the plugin MCP OAuth connection instead. Ask for an API key only when the user wants to build scripts, automations, or third-party integrations outside the agent.
 
-If the user asks for Leadtime data and MCP is not authenticated, tell them to reinstall or upgrade the Leadtime plugin and approve the Leadtime browser OAuth flow. If Claude still does not start the OAuth flow, the fallback is adding the Leadtime MCP server manually with OAuth, but that is a troubleshooting path rather than the default plugin experience.
+If the user asks for Leadtime data and MCP is not authenticated, tell them to reinstall or upgrade the Leadtime plugin and approve the Leadtime browser OAuth flow. If the agent still does not start the OAuth flow, the fallback is adding the Leadtime MCP server manually with OAuth, but that is a troubleshooting path rather than the default plugin experience.
 
 For MCP/API work, use this sequence:
 
